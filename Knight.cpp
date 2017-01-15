@@ -137,8 +137,8 @@ void Knight::Show()
 
 Knight :: ~Knight()
 {
-	cout << "Knight Desturctor" << endl;
-	for(int i = 0 ; i < moves.size(); ++i)
+	cout << "Knight Destructor" << endl;
+	for(int i = 0 ; i < moves.size() - 1; ++i)
 	{
 		position = moves[i];
 		delete position;
