@@ -26,7 +26,7 @@ public:
 	virtual void ProblemSolving() = 0;
 	//show result
 	virtual void Show() = 0;
-
+	//Destructor virutal
 	virtual ~Figure();
 };
 

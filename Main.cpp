@@ -24,6 +24,7 @@ int main ()
 	}
 
 	figure->ProblemSolving();
+	delete figure;
 
 	return 0;
 }

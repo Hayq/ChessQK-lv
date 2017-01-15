@@ -14,12 +14,12 @@ private:
 	int posCount;
 public:
 	Position(int  _col, int _row , Color col) : rows(_row) , column(_col) , color(col) ,
-	free(true), posCount(1) {};
+	free(true), posCount(0) {};
 
 	//if position free chang is not free and if position not free change is free 
 	void ChangePositionSituation();
 	//returned cell is free or not 
-	void SetMoveCount(int i) { posCount = i; }
+	void SetMoveCount(const int i) { posCount = i; }
 	int GetMoveCount(){return posCount;}
 	bool FreeOrNot() const;
 	int GetRow() const ;

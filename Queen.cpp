@@ -83,6 +83,7 @@ void Queen :: Show()
 
 Queen :: ~Queen()
 {
+	cout << "Queen Destructor " << endl;
 	delete position;
 }
 
