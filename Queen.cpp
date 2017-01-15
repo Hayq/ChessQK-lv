@@ -9,8 +9,8 @@ using namespace std;
 void Queen :: ProblemSolving()
 {
 	//set start position figure
-	Position pos(0, 0, black);
-	Move(pos);
+	position = new  Position (0, 0, black);
+	Move(*position);
 }
 
 //move figure on position
@@ -33,7 +33,7 @@ void Queen :: Move(Position& pos)
 				LoopPos.ChangePositionSituation();
 				//set in vector positions of safe queen
 				posvec[LoopPos.GetRow()] = i;
-				//
+				//New Queen position set in Newpos
 				Position Newpos(0 , pos.GetRow() + 1 , pos.GetColor());
 				//try place another Queen
 				Move(Newpos);
@@ -84,6 +84,5 @@ void Queen :: Show()
 Queen :: ~Queen()
 {
 	cout << "Queen Destructor " << endl;
-	delete position;
 }
 
