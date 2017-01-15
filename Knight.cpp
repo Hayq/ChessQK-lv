@@ -37,6 +37,7 @@ Knight::Knight(int _col , int _row)
 
 void Knight::ProblemSolving()
 {
+
     if(!IsTherClosedCell(*position, 1))
     {
         cout << "false" << endl;
@@ -75,13 +76,20 @@ bool Knight::IsTherClosedCell(Position pos, const int step)
 			return true;
 		}
 
+		//Knight try  walking to the possible 8 positions
+		//standing in pos Position
 		for (int i = 0; i < 8; ++i)
 		{
-			Position next(pos.GetCol() + moves[i]->GetCol(), pos.GetRow() + moves[i]->GetRow(),	pos.GetColor());
+
+			Position next(pos.GetCol() + moves[i]->GetCol(),
+						  pos.GetRow() + moves[i]->GetRow(),
+						  pos.GetColor());
+			//push Column in x
 			int x = next.GetCol();
+			//Row in y
 			int y = next.GetRow();
 
-			//
+			//check if knight never stand in the next cell
 			if(CanMoveToCell(next))
 			{
 				next.SetMoveCount(step);
@@ -90,15 +98,14 @@ bool Knight::IsTherClosedCell(Position pos, const int step)
 
 				Move(next);
 				//Show();
-
+				//keep moving, if on next cell knight don't stand
 				if(IsTherClosedCell(next, step + 1))
 				{
 					return true;
 				}
 				else
 				{
-					//next.ChangePositionSituation();
-					_board[x][y] = 0;
+					_board[x][y] = 0; // reset the cell
 				}
 			}
 
