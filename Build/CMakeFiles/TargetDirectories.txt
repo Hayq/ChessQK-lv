@@ -1,0 +1,3 @@
+/home/hayq/Desktop/Build/CMakeFiles/edit_cache.dir
+/home/hayq/Desktop/Build/CMakeFiles/rebuild_cache.dir
+/home/hayq/Desktop/Build/CMakeFiles/QK.dir

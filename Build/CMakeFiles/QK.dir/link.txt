@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/QK.dir/Board.cpp.o CMakeFiles/QK.dir/Figure.cpp.o CMakeFiles/QK.dir/Queen.cpp.o CMakeFiles/QK.dir/Main.cpp.o CMakeFiles/QK.dir/Position.cpp.o CMakeFiles/QK.dir/Knight.cpp.o  -o QK -rdynamic 
